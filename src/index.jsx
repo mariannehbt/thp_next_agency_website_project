@@ -10,30 +10,40 @@ import Home from 'pages/Home';
 import Navbar from 'components/Navbar';
 import Works from 'pages/Works';
 import LanguageContext from 'LanguageContext';
+import { IntlProvider } from 'react-intl';
+import messagesEn from 'assets/translation/en';
+import messagesFr from 'assets/translation/fr';
 import 'bootstrap/dist/css/bootstrap.css';
 
+const messages = {
+	fr: messagesFr,
+	en: messagesEn,
+};
+
 const App = () => {
-	const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem('language'));
+	const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem('language') || 'fr');
 	return (
 		<LanguageContext.Provider value={{ 
 			currentLanguage,
-			toFr: () => setCurrentLanguage('FR'),
-			toEn: () => setCurrentLanguage('EN')
+			toFr: () => setCurrentLanguage('fr'),
+			toEn: () => setCurrentLanguage('en')
 		}}>
-			<Router>
-				<Navbar />
-				<Switch>
-					<Route path='/about'>
-						<About />
-					</Route>
-					<Route exact path='/'>
-						<Home />
-					</Route>
-					<Route path='/works'>
-						<Works />
-					</Route>
-				</Switch>
-			</Router>
+			<IntlProvider locale={currentLanguage} messages={messages[currentLanguage]}>
+				<Router>
+					<Navbar />
+					<Switch>
+						<Route path='/about'>
+							<About />
+						</Route>
+						<Route exact path='/'>
+							<Home />
+						</Route>
+						<Route path='/works'>
+							<Works />
+						</Route>
+					</Switch>
+				</Router>
+			</IntlProvider>
 		</LanguageContext.Provider>
 	);
 };
