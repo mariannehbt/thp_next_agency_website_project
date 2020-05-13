@@ -21,7 +21,7 @@ const Navbar = () => {
 						<Link className='nav-link' to='/works'>Projets</Link>
 					</li>
 				</ul>
-					<button className='btn btn-outline-success my-2 my-sm-0' type='submit'><Flags /></button>
+					<Flags />
 			</div>
 		</nav>
 	);

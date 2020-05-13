@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import {
 	BrowserRouter as Router,
@@ -13,8 +13,13 @@ import LanguageContext from 'LanguageContext';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const App = () => {
+	const [currentLanguage, setCurrentLanguage] = useState('FR');
 	return (
-		<LanguageContext.Provider value={{ language: 'FR' }}>
+		<LanguageContext.Provider value={{ 
+			currentLanguage,
+			toFr: () => setCurrentLanguage('FR'),
+			toEn: () => setCurrentLanguage('EN')
+		}}>
 			<Router>
 				<Navbar />
 				<Switch>
