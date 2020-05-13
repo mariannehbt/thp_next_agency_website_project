@@ -13,7 +13,7 @@ import LanguageContext from 'LanguageContext';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const App = () => {
-	const [currentLanguage, setCurrentLanguage] = useState('FR');
+	const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem('language'));
 	return (
 		<LanguageContext.Provider value={{ 
 			currentLanguage,
