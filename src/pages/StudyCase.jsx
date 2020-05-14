@@ -12,9 +12,19 @@ const StudyCase = () => {
 	}, [studySlug]);
 
 	if (currentStudy) {
-		return <div className='container'><FormattedMessage id={`${currentStudy.id.toLowerCase()}.description`} /></div>;
+		return (
+			<div className='container'>
+				<h1><FormattedMessage id={`${currentStudy.id}`} /></h1>
+				<h2><FormattedMessage id={`${currentStudy.id.toLowerCase()}.title`} /></h2>
+				<p><FormattedMessage id={`${currentStudy.id.toLowerCase()}.description`} /></p>
+			</div>
+		);
 	} else {
-		return <div className='container'>Cette étude n'existe pas... :'(</div>;
+		return (
+			<div className='container'>
+				<h2><FormattedMessage id='error.missingStudy' /></h2>
+			</div>
+		);
 	};
 };
 
