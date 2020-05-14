@@ -8,7 +8,7 @@ import {
 import About from 'pages/About';
 import Home from 'pages/Home';
 import Navbar from 'components/Navbar';
-import StudyCase from 'pages/StudyCase';
+import Studies from 'pages/Studies';
 import Works from 'pages/Works';
 import LanguageContext from 'LanguageContext';
 import { IntlProvider } from 'react-intl';
@@ -40,7 +40,7 @@ const App = () => {
 							<Home />
 						</Route>
 						<Route path={`/works/:studySlug`}>
-							<StudyCase />
+							<Studies />
 						</Route>
 						<Route exact path='/works'>
 							<Works />

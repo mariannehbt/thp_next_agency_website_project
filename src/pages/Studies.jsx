@@ -14,7 +14,7 @@ const StudyCase = () => {
 	if (currentStudy) {
 		return (
 			<div className='container'>
-				<h1><FormattedMessage id={`${currentStudy.id}`} /></h1>
+				<h1>{currentStudy.id}</h1>
 				<h2><FormattedMessage id={`${currentStudy.id.toLowerCase()}.title`} /></h2>
 				<p><FormattedMessage id={`${currentStudy.id.toLowerCase()}.description`} /></p>
 			</div>
