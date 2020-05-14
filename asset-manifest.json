@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/thp_next_agency_website_project/static/js/main.a49ee160.chunk.js",
+    "main.js.map": "/thp_next_agency_website_project/static/js/main.a49ee160.chunk.js.map",
+    "runtime-main.js": "/thp_next_agency_website_project/static/js/runtime-main.fb0a5e52.js",
+    "runtime-main.js.map": "/thp_next_agency_website_project/static/js/runtime-main.fb0a5e52.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/thp_next_agency_website_project/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.2c790ac3.chunk.js": "/thp_next_agency_website_project/static/js/2.2c790ac3.chunk.js",
+    "static/js/2.2c790ac3.chunk.js.map": "/thp_next_agency_website_project/static/js/2.2c790ac3.chunk.js.map",
+    "index.html": "/thp_next_agency_website_project/index.html",
+    "precache-manifest.f072905729ea827767e6c532b8565e63.js": "/thp_next_agency_website_project/precache-manifest.f072905729ea827767e6c532b8565e63.js",
+    "service-worker.js": "/thp_next_agency_website_project/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/thp_next_agency_website_project/static/css/2.829c9cb5.chunk.css.map",
+    "static/js/2.2c790ac3.chunk.js.LICENSE.txt": "/thp_next_agency_website_project/static/js/2.2c790ac3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fb0a5e52.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.2c790ac3.chunk.js",
+    "static/js/main.a49ee160.chunk.js"
+  ]
+}
