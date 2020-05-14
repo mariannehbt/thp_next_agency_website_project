@@ -1,9 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
+import studies from '../assets/studies';
 import Flags from './Flags';
 
-const Navbar = () => {
+const Navbar = () => { 
+	let studiesList = studies.map((study, key) => (
+		<div key={key}>
+			<Link className='nav-link' to={`/works/${study.slug}`}>{study.id}</Link>
+		</div>
+	));
+
 	return (
 		<nav className='navbar navbar-expand-lg navbar-light bg-light'>
 			<Link className='navbar-brand' to='/'>Flamingo</Link>
@@ -18,16 +25,12 @@ const Navbar = () => {
 					<li className='nav-item'>
 						<Link className='nav-link' to='/about'><FormattedMessage id='about.name' /></Link>
 					</li>
-					<li className='nav-item'>
-						<Link className='nav-link' to='/works'><FormattedMessage id='works.name' /></Link>
-					</li>
 					<li className='nav-item dropdown'>
 						<Link className='nav-link dropdown-toggle' to='/works' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'><FormattedMessage id='works.name' /></Link>
 						<div className='dropdown-menu' aria-labelledby='navbarDropdown'>
-							<Link className='dropdown-item' to='/'><FormattedMessage id='home.name' /></Link>
-							<Link className='dropdown-item' to='/'><FormattedMessage id='home.name' /></Link>
+							<Link className='nav-link' to='/works'><FormattedMessage id='works.all' /></Link>
 							<div className='dropdown-divider'></div>
-							<Link className='dropdown-item' to='/'><FormattedMessage id='home.name' /></Link>
+							{studiesList}
 						</div>
 					</li>
 				</ul>
