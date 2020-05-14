@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {useParams} from 'react-router-dom';
-import studies from 'assets/studies';
 import { FormattedMessage } from 'react-intl';
+import studies from '../assets/studies';
 
 const StudyCase = () => {
 	let { studySlug } = useParams();

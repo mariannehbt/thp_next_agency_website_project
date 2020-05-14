@@ -1,7 +1,7 @@
-import about from 'assets/translation/en/about.json';
-import home from 'assets/translation/en/home.json';
-import studies from 'assets/translation/en/studies.json';
-import works from 'assets/translation/en/works.json';
+import about from './about.json';
+import home from './home.json';
+import studies from './studies.json';
+import works from './works.json';
 
 const en = {
 	...about, ...home, ...studies, ...works,

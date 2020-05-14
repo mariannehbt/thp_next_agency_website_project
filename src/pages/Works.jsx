@@ -1,7 +1,7 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import studies from 'assets/studies';
 import { Link } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
+import studies from '../assets/studies';
 
 const Works = () => {
 	let studiesList = studies.map((study, key) => (

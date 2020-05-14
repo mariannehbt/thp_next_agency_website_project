@@ -1,7 +1,7 @@
 import React from 'react';
-import { withLanguage } from 'LanguageContext';
-import FlagEn from 'assets/img/flag-en.png';
-import FlagFR from 'assets/img/flag-fr.png';
+import { withLanguage } from '../LanguageContext';
+import FlagEn from '../assets/img/flag-en.png';
+import FlagFR from '../assets/img/flag-fr.png';
 
 const Flags = ({ lg }) => {
 	localStorage.setItem('language', lg.currentLanguage);
