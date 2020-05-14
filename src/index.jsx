@@ -27,7 +27,7 @@ const App = () => {
 			toEn: () => setCurrentLanguage('en')
 		}}>
 			<IntlProvider locale={currentLanguage} messages={messages[currentLanguage]}>
-				<Router>
+				<Router basename={process.env.PUBLIC_URL}>
 					<Navbar />
 					<Switch>
 						<Route path='/about'>
