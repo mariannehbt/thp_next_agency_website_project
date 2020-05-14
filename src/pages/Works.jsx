@@ -1,14 +1,14 @@
-import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import React, { useState } from 'react';
+import { injectIntl, FormattedMessage } from 'react-intl';
 import studies from 'assets/studies';
 import { Link } from 'react-router-dom';
 
-const Works = () => {
+const Works = ({ intl }) => {
 	let studiesList = studies.map((study) => (
 		<div className='card my-3'>
 			<div className='card-body'>
-				<h5 className='card-title'>{study.name}</h5>
-				<p className='card-text'>{study.title}</p>
+				<h5 className='card-title'>{study.id}</h5>
+				<p className='card-text'><FormattedMessage id={`${study.id.toLowerCase()}.title`} /></p>
 				<Link className='btn btn-outline-info' to={`/works/${study.slug}`}>Accéder à l'étude</Link>
 			</div>
 		</div>
@@ -24,4 +24,4 @@ const Works = () => {
 	);
 };
 
-export default Works;
+export default injectIntl(Works);
